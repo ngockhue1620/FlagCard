@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="questionComponent">
+  <div class=" wrapper">
+  	<div class="notice">
+	  	<b>Submit/Total: {{TotalSubmit}}/{{StoreQuestion.length}}</b><br>
+	  	<b>Right:{{numCorrect}}</b>
+  	</div>
+  <div class="scroll-cards">
+    <button-counter
+     v-for=" (question,index) in StoreQuestion"  
+     :key="index"
+     v-bind:cauhoi="question"
+     v-bind:increment ="increment"
+     v-bind:dapan ="Answers[index]"
+
+
+    ></button-counter>
+  
+
+</div>
+</div>
+</div>
+
+
+</body>
+<!-- <script type="text/javascript" src="javascript.js"></script> -->
+<script type="text/javascript" src="./javascript/vue.js"></script>
+
+</html>
